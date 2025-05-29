@@ -1,0 +1,20 @@
+.bg-gradient {
+  background: linear-gradient(135deg, #004225, #1db954);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #1db954, #33d17a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.logo-white {
+  filter: brightness(0) invert(1);
+}

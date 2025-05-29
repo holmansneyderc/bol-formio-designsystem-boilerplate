@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "install:legacy": "npm install --legacy-peer-deps",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

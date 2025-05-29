@@ -1,63 +1,71 @@
-<!-- NAVBAR MODERNA -->
-<nav class="navbar navbar-expand-lg bg-gradient shadow-sm py-3">
-  <div class="container d-flex justify-content-between align-items-center">
-    <a class="navbar-brand d-flex align-items-center gap-3" href="#">
-      <img src="assets/logo.svg" alt="Logo" height="44" class="logo-white"/>
-      <span class="fw-bold fs-4 text-gradient">Capitalizadora Bolívar</span>
-    </a>
-    <button class="btn btn-outline-light rounded-pill px-4 fw-semibold">Contáctanos</button>
-  </div>
-</nav>
+<div *ngIf="!formJson?.components?.length">
+    <h2 class="text-center text-muted py-5">Template Seguros Bolívar Frontend</h2>
+</div>
 
-<!-- HERO SECCIÓN IMPACTANTE -->
-<section class="bg-white py-5 border-bottom">
-  <div class="container text-center">
-    <h1 class="display-5 fw-bold text-gradient mb-3">Últimas Novedades</h1>
-    <p class="lead text-muted">
-      Desde el <strong class="text-dark">11 de abril de 2021</strong> se suspende la venta del Título de Capitalización <em>Magnate Bolívar</em>.
-      <br />
-      <a href="#" class="fw-bold text-decoration-underline text-green">Ver más detalles</a>
-    </p>
-    <p class="text-secondary">Los beneficios para nuestros clientes actuales se mantienen sin cambios.</p>
-  </div>
-</section>
+<div *ngIf="formJson?.components?.length">
 
-<!-- NUEVO BLOQUE DE BENEFICIOS -->
-<section class="py-0 bg-light border-bottom">
-  <div class="container">
-    <div class="row g-4 text-center">
-      <div class="col-sm-6 col-lg-3" *ngFor="let item of beneficios">
-        <div class="card h-100 border-0 shadow-lg hover-scale rounded-4 p-4">
-          <img [src]="item.icono" class="mx-auto mb-3" style="height: 52px;" alt="{{item.titulo}}" />
-          <h6 class="fw-bold text-green">{{ item.titulo }}</h6>
-          <p class="small text-muted" [innerHTML]="item.descripcion"></p>
+    <!-- NAVBAR MODERNA -->
+    <nav class="navbar navbar-expand-lg bg-gradient shadow-sm py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+                <img src="assets/logo.svg" alt="Logo" height="44" class="logo-white" />
+                <span class="fw-bold fs-4 text-gradient">Capitalizadora Bolívar</span>
+            </a>
+            <button class="btn btn-outline-light rounded-pill px-4 fw-semibold">Contáctanos</button>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </nav>
 
-<!-- FORMULARIO CON ESTILO CORPORATIVO -->
-<section class="bg-white py-5 border-top border-bottom">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-7">
-        <div class="bg-light shadow-lg rounded-4 p-5 border-start border-4 border-success">
-          <h4 class="fw-bold mb-4 text-gradient">Formulario de contacto</h4>
-          <formio [form]="formJson"></formio>
+    <!-- HERO SECCIÓN IMPACTANTE -->
+    <section class="bg-white py-5 border-bottom">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold text-gradient mb-3">Últimas Novedades</h1>
+            <p class="lead text-muted">
+                Desde el <strong class="text-dark">11 de abril de 2021</strong> se suspende la venta del Título de
+                Capitalización <em>Magnate Bolívar</em>.
+                <br />
+                <a href="#" class="fw-bold text-decoration-underline text-green">Ver más detalles</a>
+            </p>
+            <p class="text-secondary">Los beneficios para nuestros clientes actuales se mantienen sin cambios.</p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- FOOTER MODERNO -->
-<footer class="bg-gradient text-white py-4">
-  <div class="container text-center">
-    <p class="mb-2 small">&copy; 2025 Capitalizadora Bolívar. Todos los derechos reservados.</p>
-    <div>
-      <a href="#" class="text-white text-decoration-none me-4">Política de privacidad</a>
-      <a href="#" class="text-white text-decoration-none">Términos de uso</a>
-    </div>
-  </div>
-</footer>
+    <!-- NUEVO BLOQUE DE BENEFICIOS -->
+    <section class="py-3 bg-light border-bottom">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-sm-6 col-lg-3" *ngFor="let item of beneficios">
+                    <div class="card h-100 border-0 shadow-lg hover-scale rounded-4 p-4">
+                        <img [src]="item.icono" class="mx-auto mb-3" style="height: 52px;" alt="{{item.titulo}}" />
+                        <h6 class="fw-bold text-green">{{ item.titulo }}</h6>
+                        <p class="small text-muted" [innerHTML]="item.descripcion"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO CON ESTILO CORPORATIVO -->
+    <section class="bg-white py-5 border-top border-bottom">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="bg-light shadow-lg rounded-4 p-5 border-start border-4 border-success">
+                        <h4 class="fw-bold mb-4 text-gradient">Formulario de contacto</h4>
+                        <formio [form]="formJson"></formio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER MODERNO -->
+    <footer class="bg-gradient text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2 small">&copy; 2025 Capitalizadora Bolívar. Todos los derechos reservados.</p>
+            <div>
+                <a href="#" class="text-white text-decoration-none me-4">Política de privacidad</a>
+                <a href="#" class="text-white text-decoration-none">Términos de uso</a>
+            </div>
+        </div>
+    </footer>
+</div>
